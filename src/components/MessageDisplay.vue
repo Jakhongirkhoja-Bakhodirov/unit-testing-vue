@@ -1,14 +1,22 @@
+<template>
+  <p v-if="error" data-testid="message-error">{{ error }}</p>
+  <p v-else data-testid="message">{{ message.text }}</p>
+</template>
 <script>
 import { getMessage } from "@/services/axios";
 
 export default {
   data() {
     return {
-      message: {},
+      message: {
+        text: {
+          type: String,
+        },
+      },
       error: null,
     };
   },
-  async created() {
+  async created() { 
     try {
       this.message = await getMessage();
     } catch (err) {

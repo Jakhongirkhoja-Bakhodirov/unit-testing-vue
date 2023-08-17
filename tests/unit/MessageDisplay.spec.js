@@ -20,7 +20,7 @@ describe("MessageDisplay", () => {
     const message = wrapper.find('[data-testid="message"]').element.textContent;
     expect(message).toEqual(mockMessage);
   });
-
+  console.log("it is just test code in order to create pull request on cmd");
   it("Displays an error when getMessage call fails", async () => {
     const mockError = "Oops! Something went wrong.";
     getMessage.mockRejectedValueOnce(mockError);

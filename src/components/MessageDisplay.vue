@@ -16,7 +16,7 @@ export default {
       error: null,
     };
   },
-  async created() { 
+  async created() {
     try {
       this.message = await getMessage();
     } catch (err) {
